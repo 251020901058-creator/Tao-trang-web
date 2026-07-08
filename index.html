@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #1a1a1a; 
+        }
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 10px;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            z-index: 999;
+        }
+        .skip-link:focus {
+            top: 10px;
+        }
+        header {
+            background-color: #1a252f;
+            padding: 15px 20px;
+        }
+
+        .nav-links {
+            display: flex; 
+            list-style: none;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        .nav-links a:hover, 
+        .nav-links a:focus {
+            background-color: #34495e;
+            color: #f1c40f;
+            outline: 2px solid #f1c40f; 
+        }
+        .content {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid; 
+            grid-template-columns: 2fr 1fr; 
+            gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+        main, .sidebar {
+            background-color: #ffffff;
+            padding: 25px;           
+            border: 1px solid #dcdcdc; 
+            border-radius: 6px;
+            margin-bottom: 20px;       
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Footer cuối trang */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a252f;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Chuyển đến nội dung chính</a>
+
+    <header>
+        <nav aria-label="Thanh điều hướng chính">
+            <ul class="nav-links">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <main id="main-content" tabindex="-1">
+            <h1>Chào mừng đến với trang web của chúng tôi!</h1>
+            <p>Đây là trang chủ của trang web. Bạn có thể tìm thấy thông tin về chúng tôi, các dịch vụ và cách liên hệ.</p>
+            <p>Trang web đảm bảo các yếu tố về tương tác và trải nghiệm người dùng giúp mọi người dùng đều có thể dễ dàng tiếp cận thông tin.</p>
+        </main>
+        <aside class="sidebar" aria-label="Thông tin liên hệ phụ">
+            <section>
+                <h2>Địa chỉ</h2>
+                <p>Hà Nội, Việt Nam</p>
+                <p>Email: contact@example.com</p>
+            </section>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bản quyền thuộc về Bùi Linh Chi</p>
+    </footer>
+
+</body>
+</html>
